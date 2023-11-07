@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="addCookie()">添加cookie</button>
+    <button onclick="delCookie()">删除cookie</button>
+    <button onclick="queryCookie()">查询cookie</button>
+    <button onclick="editCookie()">修改cookie</button>
+</body>
+<script>
+    //添加cookie
+    function addCookie() {
+        fetch('/addcookie', {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            }
+        })
+    }
+    //删除cookie
+    function delCookie() {
+        fetch('/delcookie', {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            }
+        })
+    }
+    //查询cookie
+    function queryCookie() {
+        fetch('/querycookie', {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            }
+        })
+    }
+    //修改cookie
+    function editCookie() {
+        fetch('/editcookie', {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            }
+        })
+    }
+</script>
+
+</html>

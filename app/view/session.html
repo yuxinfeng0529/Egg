@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="addSession()">添加session</button>
+		<p>session:<%=username %></p>
+	</body>
+	<script>
+		function addSession(){
+			fetch('/addsession',{
+				method:"post",
+				headers:{
+					"Content-type":"application/json"
+				}
+			})
+		}
+	</script>
+</html>
